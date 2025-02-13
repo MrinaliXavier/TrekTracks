@@ -1,28 +1,38 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
 import { TextInput } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function SignIn() {
+
+export default function SignUp() {
   const navigation= useNavigation();
   const router=useRouter();
 
-  useEffect(()=>{
-    navigation.setOptions({
-      headerShown:false
-    })
-  },[])
+   useEffect(()=>{
+      navigation.setOptions({
+        headerShown:false
+      })
+    },[])
+  
 
   return (
-    <View style={{
+    <View
+    style={{
       padding:25,
-      marginTop:25,
+      paddingTop:50,
       backgroundColor:'white',
       height:'100%'
+
     }}>
-     <Text style={{
+
+    <TouchableOpacity onPress={()=>router.back()}>
+      <Ionicons name='arrow-back' size={24} color={"black"}/>
+    </TouchableOpacity>
+    <Text style={{
       fontFamily:'outfit-bold',
-      fontSize:30
+      fontSize:30,
+      marginTop:30
      }}>Let's Sign You In</Text> 
 
     <Text style={{
@@ -39,30 +49,32 @@ export default function SignIn() {
       marginTop:10
      }}>You've been missed!</Text>
 
-      <View style={{
-        marginTop:50
-      }}>
-        <Text style={{
-          fontFamily:'outfit'
-        }}>Email</Text>
-        <TextInput
-        style={styles.input}
-         placeholder='Enter Email'/>
         
-      </View>
 
-      <View style={{
-        marginTop:20
-      }}>
-        <Text style={{
-          fontFamily:'outfit'
-        }}> Password</Text>
-        <TextInput 
-        secureTextEntry={true}
-        style={styles.input}
-        placeholder='Enter Password'/>
-        
-      </View>
+        <View style={{
+              marginTop:20
+            }}>
+              <Text style={{
+                fontFamily:'outfit'
+              }}>Email</Text>
+              <TextInput
+              style={styles.input}
+               placeholder='Enter Email'/>
+              
+        </View>
+      
+        <View style={{
+              marginTop:20
+            }}>
+              <Text style={{
+                fontFamily:'outfit'
+              }}> Password</Text>
+              <TextInput 
+              secureTextEntry={true}
+              style={styles.input}
+              placeholder='Enter Password'/>
+              
+        </View>
 
         {/* {Sign in Button} */}
       <TouchableOpacity
@@ -78,9 +90,9 @@ export default function SignIn() {
           textAlign:'center'
         }}>Sign In</Text>
       </TouchableOpacity>
-
-      
-        {/* {Create Account Button} */}
+        
+              
+       {/* {Create Account Button} */}
         <TouchableOpacity
           onPress={()=>router.replace('auth/sign-up')}
         style={{
@@ -97,13 +109,10 @@ export default function SignIn() {
       </TouchableOpacity>
 
     </View>
-    
-    
   )
 }
 
 const styles = StyleSheet.create({
-
   input:{
     padding:15,
     borderWidth:1,
