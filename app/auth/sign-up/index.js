@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
 import { TextInput } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
+
 
 
 export default function SignUp() {
@@ -21,18 +21,13 @@ export default function SignUp() {
     style={{
       padding:25,
       paddingTop:50,
-      backgroundColor:'white',
+      backgroundColor:'#F0FFF0',
       height:'100%'
 
     }}>
-
-    <TouchableOpacity onPress={()=>router.back()}>
-      <Ionicons name='arrow-back' size={24} color={"black"}/>
-    </TouchableOpacity>
       <Text style={{
         fontFamily:'outfit-bold',
         fontSize:30,
-        marginTop:30
 
       }}>Create New Account</Text>
 
