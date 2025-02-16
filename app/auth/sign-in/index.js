@@ -5,6 +5,8 @@ import { TextInput } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 
+
+
 export default function SignIn() {
   const navigation= useNavigation();
   const router=useRouter();
@@ -105,6 +107,9 @@ export default function SignIn() {
           textAlign:'center'
         }}>Create Account</Text>
       </TouchableOpacity>
+
+
+
 
     </View>
     
