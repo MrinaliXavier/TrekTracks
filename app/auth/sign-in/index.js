@@ -2,8 +2,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
 import { TextInput } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-
 
 export default function SignIn() {
   const navigation= useNavigation();
@@ -22,17 +20,9 @@ export default function SignIn() {
       backgroundColor:'white',
       height:'100%'
     }}>
-
-    
-
-      <TouchableOpacity onPress={()=>router.back()}>
-      <Ionicons name="arrow-back-circle" size={30} color="black" />
-      </TouchableOpacity>
-
      <Text style={{
       fontFamily:'outfit-bold',
-      fontSize:30,
-      marginTop:30
+      fontSize:30
      }}>Let's Sign You In</Text> 
 
     <Text style={{
