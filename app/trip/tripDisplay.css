@@ -1,22 +1,35 @@
+
 .app {
     text-align: center;
+    padding: 20px;
 }
 
-.loading {
-    font-size: 2em;
-    color: #888;
+.categories button {
+    margin: 5px;
 }
 
-.trips ul {
-    list-style-type: none;
-    padding: 0;
+.add-place input {
+    display: block;
+    margin: 10px auto;
 }
 
-.trips li {
-    margin: 1em 0;
+.plans .plan {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
 }
 
-.trips h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.bottom-navigation img {
+    height: 30px;
 }
