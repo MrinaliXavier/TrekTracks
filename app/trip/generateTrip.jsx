@@ -1,4 +1,3 @@
-// Trips.js
 import React from 'react';
 
 const trips = [
