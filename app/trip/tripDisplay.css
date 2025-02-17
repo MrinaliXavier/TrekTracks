@@ -1,0 +1,22 @@
+.app {
+    text-align: center;
+}
+
+.loading {
+    font-size: 2em;
+    color: #888;
+}
+
+.trips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trips li {
+    margin: 1em 0;
+}
+
+.trips h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
