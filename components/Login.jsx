@@ -2,6 +2,7 @@ import { View, Text,Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useRouter } from 'expo-router'
 
+
 export default function Login() {
 
     const router = useRouter();
@@ -11,7 +12,7 @@ export default function Login() {
       <Image source={require('./../assets/images/splashScreen.jpg')}
       style={{
         width:'415',
-        height:800
+        height:650
         
       }}/>
 
@@ -34,7 +35,16 @@ export default function Login() {
         }}>A comprehensive travel planning solution for SriLanka. With us you can know Sri Lanka bettter.
 </Text>
       
-
+<TouchableOpacity style={styles.button}
+            onPress={()=>router.push('/Review')}
+        >
+          <Text style={{
+            textAlign:'center',
+            fontFamily:'outfit',
+            fontSize:17,
+            color:'white'
+          }}>Reviews</Text>
+        </TouchableOpacity>
 
 <TouchableOpacity style={styles.button}
             onPress={()=>router.push('auth/sign-in')}
@@ -46,6 +56,7 @@ export default function Login() {
             color:'white'
           }}>Get Started</Text>
         </TouchableOpacity>
+        
 
       </View>
 
@@ -67,7 +78,7 @@ const styles = StyleSheet.create({
     padding:15,
     backgroundColor:'black',
     borderRadius:99,
-    marginTop:'10%'
+marginTop:5,
     
   }
 })

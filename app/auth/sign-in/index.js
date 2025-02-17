@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
 import { TextInput } from 'react-native';
 
+
+
 export default function SignIn() {
   const navigation= useNavigation();
   const router=useRouter();
@@ -95,6 +97,9 @@ export default function SignIn() {
           textAlign:'center'
         }}>Create Account</Text>
       </TouchableOpacity>
+
+
+
 
     </View>
     

@@ -1,0 +1,35 @@
+
+.app {
+    text-align: center;
+    padding: 20px;
+}
+
+.categories button {
+    margin: 5px;
+}
+
+.add-place input {
+    display: block;
+    margin: 10px auto;
+}
+
+.plans .plan {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.bottom-navigation img {
+    height: 30px;
+}
